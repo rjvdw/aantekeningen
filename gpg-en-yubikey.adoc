@@ -34,4 +34,16 @@ ykman openpgp reset
 
 == GPG-sleutel op YubiKey zetten
 
-Om een GPG-sleutel op een YubiKey te zetten kan gebruik gemaakt worden van het commando `keytocard` (zie https://www.gnupg.org/howtos/card-howto/en/ch05.html[Chapter 5. Advanced Features] van https://www.gnupg.org/howtos/card-howto/en/smartcard-howto.html[How to use the Fellowship Smartcard]).
+Om een GPG-sleutel op een YubiKey te zetten kan gebruik gemaakt worden van het commando `keytocard` (zie https://www.gnupg.org/howtos/card-howto/en/ch05.html[Chapter 5. Advanced Features] van https://www.gnupg.org/howtos/card-howto/en/smartcard-howto.html[How to use the Fellowship Smartcard]). Dit wordt uitgelegd op https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP[Using Your YubiKey with OpenPGP]. De stappen zijn:
+
+. Maak een key aan.
+. Bewerk de key.
+. Maak subkey voor authenticatie aan.
+. Voer het commando `keytocard` uit.
+. Selecteer de encryptie-subkey.
+. Voer het commando `keytocard` uit.
+. Selecteer de authenticatie-subkey.
+. Voer het commando `keytocard` uit.
+. Voer het commando `save` uit.
+
+Hou hierbij in gedachten dat `keytocard` de key _verplaatst_ naar de YubiKey.
