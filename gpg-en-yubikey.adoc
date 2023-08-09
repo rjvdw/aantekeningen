@@ -1,0 +1,37 @@
+= GPG & YubiKey
+Ruud van der Weide <rj@rdcl.dev>
+:description: Aantekeningen gerelateerd aan GPG en YubiKey
+
+== GPG basics
+
+Handige commando's:
+
+* Sleutel aanmaken: `gpg --expert --full-gen-key`
+* Sleutel bewerken: `gpg --expert --edit-key <KEY_ID>`
+
+Een GPG sleutel bestaat uit een primary key en een aantal subkeys. De primary key wordt doorgaans gebruikt voor signing, de subkeys kunnen gebruikt worden voor siging, encryption en authentication. Om een subkey voor authentication te maken moet de optie `--expert` meegegeven worden, zonder deze optie kan alleen voor signing en encryption gekozen worden.
+
+== YubiKey beheren
+
+De YubiKey heeft een aantal PIN'sfootnote:[Zie https://support.yubico.com/hc/en-us/articles/4402836718866-Understanding-YubiKey-PINs[Understanding YubiKey PINs]]:
+
+* FIDO2footnote:[Wordt gebruikt bij WebAuthn. Apps kunnen aangeven of de PIN verplicht is of niet.] - Standaard leeg.
+* PIVfootnote:[Personal Identity Verification, bijvoorbeeld bij Smart Cards.] - Standaard _123456_.
+* OpenPGPfootnote:[Zie https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP[Using Your YubiKey with OpenPGP]]:
+** User PIN: Standaard _123456_.
+** Admin PIN: Standaard _12345678_.
+
+Om de YubiKey te beheren kan https://www.yubico.com/support/download/yubikey-manager/[de YubiKey manager] gebruikt worden. Deze komt ook met een commandline tool (`ykman`). Om deze tool te gebruiken:
+
+[source,shell]
+cd "/Applications/YubiKey Manager.app/Contents/MacOS"
+./ykman "$@"
+
+Met deze tool kan bijvoorbeeld OpenGPG op de YubiKey gereset worden:
+
+[source,shell]
+ykman openpgp reset
+
+== GPG-sleutel op YubiKey zetten
+
+Om een GPG-sleutel op een YubiKey te zetten kan gebruik gemaakt worden van het commando `keytocard` (zie https://www.gnupg.org/howtos/card-howto/en/ch05.html[Chapter 5. Advanced Features] van https://www.gnupg.org/howtos/card-howto/en/smartcard-howto.html[How to use the Fellowship Smartcard]).
