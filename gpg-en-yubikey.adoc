@@ -32,6 +32,10 @@ Met deze tool kan bijvoorbeeld OpenGPG op de YubiKey gereset worden:
 [source,shell]
 ykman openpgp reset
 
+=== OpenPGP PIN's beheren
+
+Om de PIN's voor OpenPGP te beheren kan gebruik gemaakt worden van het commando `gpg --card-edit`. Kies daarvoor in het menu dat geopend wordt voor `passwd`.
+
 == GPG-sleutel op YubiKey zetten
 
 Om een GPG-sleutel op een YubiKey te zetten kan gebruik gemaakt worden van het commando `keytocard` (zie https://www.gnupg.org/howtos/card-howto/en/ch05.html[Chapter 5. Advanced Features] van https://www.gnupg.org/howtos/card-howto/en/smartcard-howto.html[How to use the Fellowship Smartcard]). Dit wordt uitgelegd op https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP[Using Your YubiKey with OpenPGP]. De stappen zijn:
