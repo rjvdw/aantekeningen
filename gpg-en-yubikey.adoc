@@ -25,13 +25,7 @@ De YubiKey heeft een aantal PIN'sfootnote:[Zie https://support.yubico.com/hc/en-
 ** User PIN: Standaard _123456_.
 ** Admin PIN: Standaard _12345678_.
 
-Om de YubiKey te beheren kan https://www.yubico.com/support/download/yubikey-manager/[de YubiKey manager] gebruikt worden. Deze komt ook met een commandline tool (`ykman`). Om deze tool te gebruiken:
-
-[source,shell]
-cd "/Applications/YubiKey Manager.app/Contents/MacOS"
-./ykman "$@"
-
-Met deze tool kan bijvoorbeeld OpenGPG op de YubiKey gereset worden:
+Om de YubiKey te beheren kan https://www.yubico.com/support/download/yubikey-manager/[de YubiKey manager] gebruikt worden. Deze komt ook met een commandline tool (https://developers.yubico.com/yubikey-manager/[`ykman`]). Met deze tool kan bijvoorbeeld OpenGPG op de YubiKey gereset worden:
 
 [source,shell]
 ykman openpgp reset
