@@ -21,7 +21,7 @@ De YubiKey heeft een aantal PIN'sfootnote:[Zie https://support.yubico.com/hc/en-
 
 * FIDO2footnote:[Wordt gebruikt bij WebAuthn. Apps kunnen aangeven of de PIN verplicht is of niet.] - Standaard leeg.
 * PIVfootnote:[Personal Identity Verification, bijvoorbeeld bij Smart Cards.] - Standaard _123456_.
-* OpenPGPfootnote:[Zie https://support.yubico.com/hc/en-us/articles/360013790259-Using-Your-YubiKey-with-OpenPGP[Using Your YubiKey with OpenPGP]]:
+* OpenPGP:
 ** User PIN: Standaard _123456_.
 ** Admin PIN: Standaard _12345678_.
 
