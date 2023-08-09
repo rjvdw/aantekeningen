@@ -1,6 +1,10 @@
 = GPG & YubiKey
 Ruud van der Weide <rj@rdcl.dev>
 :description: Aantekeningen gerelateerd aan GPG en YubiKey
+:sectnums:
+:sectnumlevels: 3
+:toc:
+:toclevels: 3
 
 == GPG basics
 
